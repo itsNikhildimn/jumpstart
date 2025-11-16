@@ -1,23 +1,19 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Dialog,
   DialogPanel,
   Disclosure,
   DisclosureButton,
   PopoverGroup,
-} from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+} from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-
-import logo from '../assets/logo.png'
+import logo from "../assets/logo.png";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
@@ -25,18 +21,12 @@ export default function Header() {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
-
         {/* LEFT SIDE: LOGO + MENU */}
         <div className="flex items-center gap-x-12">
-
           {/* LOGO */}
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              alt=""
-              src={logo}
-              className="h-8 w-auto"
-            />
+            <img alt="" src={logo} className="h-8 w-auto" />
           </a>
 
           {/* MENU NEXT TO LOGO */}
@@ -54,7 +44,6 @@ export default function Header() {
               Results
             </a>
           </PopoverGroup>
-
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -70,25 +59,52 @@ export default function Header() {
         </div>
 
         {/* RIGHT SIDE: LOGIN */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
+        {/* RIGHT SIDE: SIGN IN + GET STARTED */}
+        <div className="hidden lg:flex lg:items-center lg:gap-x-6">
+          {/* SIGN IN */}
+          <a
+            href="#"
+            className="flex items-center gap-2 text-sm font-semibold text-gray-900"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0"
+              />
+            </svg>
+            Sign In
+          </a>
+
+          {/* GET STARTED BUTTON */}
+          <a
+            href="#"
+            className="primary-btn rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 transition"
+          >
+            Get Started
           </a>
         </div>
       </nav>
 
       {/* MOBILE MENU */}
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src={logo}
-                className="h-8 w-auto"
-              />
+              <img alt="" src={logo} className="h-8 w-auto" />
             </a>
             <button
               type="button"
@@ -104,7 +120,6 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">
                     Home
@@ -143,9 +158,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }

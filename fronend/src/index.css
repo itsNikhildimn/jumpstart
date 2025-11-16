@@ -1,1 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "tailwindcss";
+
+
+/* common css  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+
+}
+
+p {
+    font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #65758B;
+
+}
+
+nav a {
+    font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #0F1729;
+
+}
+
+
+.primary-btn {
+    background: #F59F0A;
+    box-shadow: 0px 2px 4px -2px #0000001A;
+    width: 101.02999877929688;
+    height: 36;
+    opacity: 1;
+    top: 14px;
+    left: 1266.97px;
+    border-radius: 14px;
+    color: #0F1729;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 13px 34px;
+}
+
+
+.secondary-btn {
+    border: 2px solid #188B8B;
+    width: 177.8000030517578;
+    height: 44;
+    opacity: 1;
+    top: 437px;
+    left: 264.3px;
+    border-radius: 14px;
+    border-width: 2px;
+    color: #188B8B;
+    padding: 13px 34px;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+
+}
+
+/* common css  */
+
+
+
+
+/* home page */
+
+.hero-section {
+    background: linear-gradient(135deg, #DCF9F9 0%, #FAFAFA 50%, #FAFAFA 100%);
+
+}
+
+
+.gradient-hero{
+        box-shadow: 0px 4px 40px 0px #188b8b2b;
+    border-radius: 24px;
+}
+
+.test {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+/* home page */
